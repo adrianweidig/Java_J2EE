@@ -1,0 +1,341 @@
+LICENSE - Educational License
+================================
+
+# Educational License Agreement
+## Bundeswehr-Lehrgang 8606 & Rheinwerk Verlag Project
+
+**Effective Date:** November 24, 2025
+
+---
+
+## 1. PURPOSE
+
+This project, "Bookstore Application - Java EE 8 Learning Project," is created for **educational purposes only** as part of:
+
+- **Bundeswehr-Lehrgang 8606:** "Java für Fortgeschrittene Teil 2" (Java for Advanced Users Part 2)
+- **Reference Material:** "Professionell entwickeln mit Java EE 8" by Alexander Salvanos (Rheinwerk Verlag)
+
+The project serves as a **learning template** and **practical reference** for Java EE 8 development.
+
+---
+
+## 2. PERMITTED USE
+
+You are permitted to:
+
+✅ **View and Study**
+- Read and study all source code
+- Understand the architecture and design patterns
+- Learn from the implementation
+
+✅ **Personal Learning**
+- Use as a learning resource for your studies
+- Modify code for educational purposes
+- Experiment and test locally
+
+✅ **Educational Sharing**
+- Share with classmates and study groups
+- Use in educational settings
+- Reference in academic projects
+
+✅ **Non-Commercial Development**
+- Create derived works for learning
+- Build upon this project for your own learning
+- Contribute improvements and fixes
+
+---
+
+## 3. RESTRICTIONS
+
+You are **NOT** permitted to:
+
+❌ **Commercial Use**
+- Use this code in commercial products
+- Sell or distribute for profit
+- Use in production systems without modification
+
+❌ **Redistribution**
+- Claim ownership of this code
+- Sell or charge for distribution
+- Remove or alter license notices
+
+❌ **Misrepresentation**
+- Claim you wrote the original code
+- Remove references to sources (Rheinwerk, Bundeswehr)
+- Use without proper attribution
+
+❌ **Intellectual Property Violation**
+- Violate Rheinwerk Verlag's copyright
+- Violate Bundeswehr material rights
+- Use copyrighted code without attribution
+
+---
+
+## 4. ATTRIBUTION REQUIREMENTS
+
+When using this project, you must:
+
+✅ Include this LICENSE file
+✅ Keep all original copyright notices
+✅ Provide credit to:
+   - Alexander Salvanos (Author of "Professionell entwickeln mit Java EE 8")
+   - Rheinwerk Verlag (Publisher)
+   - Bundeswehr (Source of Lehrgang 8606)
+   - Eclipse Foundation (GlassFish)
+   - Jakarta EE Community
+
+Example attribution:
+
+```
+This project is based on:
+- "Professionell entwickeln mit Java EE 8" by Alexander Salvanos (Rheinwerk Verlag)
+- Bundeswehr-Lehrgang 8606: "Java für Fortgeschrittene Teil 2"
+- GlassFish Application Server (Eclipse Foundation)
+```
+
+---
+
+## 5. THIRD-PARTY LICENSES
+
+This project uses the following technologies with their respective licenses:
+
+### Java Development Kit (JDK)
+- **License:** GNU General Public License v2 with Classpath Exception
+- **Source:** [Adoptium](https://adoptium.net/)
+- **Link:** https://adoptium.net/temurin/license/
+
+### GlassFish Application Server
+- **License:** Eclipse Public License 2.0 (EPL-2.0)
+- **Source:** Eclipse Foundation
+- **Link:** https://glassfish.org/
+
+### Jakarta EE Platform
+- **License:** Eclipse Public License 2.0 (EPL-2.0)
+- **Source:** Eclipse Foundation
+- **Link:** https://jakarta.ee/
+
+### Gradle
+- **License:** Apache License 2.0
+- **Source:** Gradle Inc.
+- **Link:** https://gradle.org/license/
+
+### H2 Database Engine
+- **License:** Mozilla Public License 2.0 (MPL-2.0)
+- **Source:** H2 Database
+- **Link:** https://h2database.com/html/license.html
+
+### JUnit 5
+- **License:** Eclipse Public License 2.0 (EPL-2.0)
+- **Source:** JUnit Team
+- **Link:** https://junit.org/junit5/
+
+### Mockito
+- **License:** MIT License
+- **Source:** Mockito Contributors
+- **Link:** https://mockito.org/
+
+### AssertJ
+- **License:** Apache License 2.0
+- **Source:** AssertJ Project
+- **Link:** https://assertj.org/
+
+---
+
+## 6. DISCLAIMER
+
+**AS IS BASIS**
+
+THIS PROJECT IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT.
+
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE PROJECT OR THE USE OR OTHER DEALINGS IN THE PROJECT.
+
+---
+
+## 7. NO WARRANTY
+
+The project is provided without any warranty. While effort has been made to ensure accuracy and functionality:
+
+- Code is provided for **educational purposes**
+- No guarantee of correctness or suitability for any purpose
+- Users must test and validate the code themselves
+- The authors are not liable for any damages or issues
+
+---
+
+## 8. MODIFICATIONS
+
+You may modify this project for:
+
+✅ **Learning purposes** - Understand how things work
+✅ **Personal projects** - Build on the knowledge
+✅ **Educational use** - Share with classmates
+✅ **Contributions** - Improve the learning material
+
+When sharing modifications, please:
+- Include this license
+- Document your changes
+- Provide proper attribution
+- Maintain the educational purpose
+
+---
+
+## 9. DISTRIBUTION
+
+If you distribute this project or derivatives:
+
+✅ **DO:**
+- Include this LICENSE file
+- Keep all copyright notices
+- Provide source code
+- Maintain the same license terms
+- Include attribution
+
+❌ **DON'T:**
+- Remove license notices
+- Claim ownership
+- Use for commercial purposes
+- Violate Rheinwerk/Bundeswehr IP rights
+
+---
+
+## 10. INTELLECTUAL PROPERTY
+
+### Original Content
+This project's original code, documentation, and structure are provided under this Educational License.
+
+### Third-Party Content
+- **"Professionell entwickeln mit Java EE 8"** © Rheinwerk Verlag - All rights reserved
+- **Bundeswehr Material** © Bundeswehr - Official training material
+- **GlassFish** © Eclipse Foundation - Open source project
+- **Jakarta EE** © Eclipse Foundation - Open source specifications
+
+### Your Usage
+When using this project, you agree to respect all third-party intellectual property rights.
+
+---
+
+## 11. TERMINATION
+
+Your rights under this license will be terminated automatically if you:
+
+1. Violate any of the restrictions in Section 3
+2. Use the code for commercial purposes without explicit permission
+3. Claim ownership of the original work
+4. Violate third-party intellectual property rights
+
+Upon termination, you must:
+- Stop using the project
+- Delete all copies
+- Remove from any distribution
+
+---
+
+## 12. GOVERNING LAW
+
+This license is governed by:
+
+- **German Law** (Rheinwerk Verlag location)
+- **European Union Regulations**
+- **Open Source License Standards**
+
+---
+
+## 13. CONTACT & PERMISSIONS
+
+For inquiries regarding:
+
+**Educational Use:**
+- This project is designed for learning - no special permission needed
+- Follow the guidelines in this license
+
+**Commercial Use:**
+- Contact: [Your GitHub Profile / Email]
+- Contact Rheinwerk Verlag: www.rheinwerk-verlag.de
+- Contact Bundeswehr: [official channels]
+
+**Modifications & Contributions:**
+- Fork the repository on GitHub
+- Submit pull requests
+- Follow the CONTRIBUTING.md guidelines
+
+---
+
+## 14. ACKNOWLEDGMENTS
+
+This project would not be possible without:
+
+- **Alexander Salvanos** - Author of the reference textbook
+- **Rheinwerk Verlag** - Publisher of the educational material
+- **Bundeswehr** - Official training program (Lehrgang 8606)
+- **Eclipse Foundation** - GlassFish and Jakarta EE
+- **Open Source Community** - All contributing projects
+
+---
+
+## 15. CHANGES TO THIS LICENSE
+
+This Educational License may be updated. Changes will be:
+
+- Announced in the repository
+- Applied to new versions
+- Noted in the CHANGELOG
+- Respecting existing usage rights
+
+---
+
+## QUICK REFERENCE
+
+| Use Case | Allowed? | Terms |
+|----------|----------|-------|
+| **Study & Learning** | ✅ Yes | Keep attribution |
+| **Modify for Learning** | ✅ Yes | Keep attribution |
+| **Share with Class** | ✅ Yes | Keep license |
+| **Personal Project** | ✅ Yes | Keep attribution |
+| **Sell as Product** | ❌ No | Need permission |
+| **Use in Company** | ❌ No | Need permission |
+| **Claim as Your Work** | ❌ No | Violates license |
+| **Remove License** | ❌ No | Keep notices |
+
+---
+
+## ACCEPTANCE
+
+By using this project, you agree to:
+
+1. Accept all terms of this Educational License
+2. Respect all intellectual property rights
+3. Provide proper attribution
+4. Not use for commercial purposes
+5. Follow the guidelines provided
+
+---
+
+**Last Updated:** November 24, 2025
+
+**License Type:** Educational License (Custom)
+
+**Compliance:** Compatible with EPL-2.0, MIT, and Apache 2.0 licenses used by dependencies
+
+---
+
+## For Questions
+
+If you have questions about this license:
+
+1. **Check GitHub Issues** - Your question may already be answered
+2. **Read the Documentation** - See README.md and CONTRIBUTING.md
+3. **Contact the Maintainer** - Use the contact information in README.md
+4. **Review Rheinwerk Rights** - Respect the original book copyright
+
+---
+
+**Remember: This is an educational project. Learn, share knowledge, respect intellectual property. 🎓**
+
+---
+
+```
+Educational License v1.0
+Bookstore Application - Java EE 8 Learning Project
+© 2025 - Learning Material
+Based on Rheinwerk Verlag & Bundeswehr Lehrgang 8606
+```
