@@ -9,7 +9,7 @@ public class HelloServlet extends HttpServlet {
     private String message;
 
     public void init() {
-        message = "Hello World!";
+        message = "Das ist das KIT Testprojekt für J2EE. Das hier ist in der HelloServlet.java";
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
