@@ -9,42 +9,42 @@ import javax.servlet.annotation.*;
 
 /**
  * AUFGABE 1.1: HelloServlet
- *
+ * <p>
  * ANFORDERUNGEN:
  * - Servlet namens "HelloServlet" erstellen
  * - Bei GET-Anfrage die Nachricht "Hello, World!" anzeigen
  * - Mit Annotationen einbinden (keine web.xml)
- *
+ * <p>
  * VORGEHEN ZUR LÖSUNG:
- *
+ * <p>
  * SCHRITT 1: Servlet-Klasse erstellen
  * - Klasse extends HttpServlet
  * - Package: weidig.adrian.java_j2ee.aufgaben
  * - Name: HelloWorldServlet (um Konflikt mit bestehendem HelloServlet zu vermeiden)
- *
+ * <p>
  * SCHRITT 2: @WebServlet Annotation hinzufügen
  * - name = "helloWorldServlet" (interner Name)
  * - value = "/hello-world" (URL-Mapping)
  * - Alternative: urlPatterns = {"/hello-world"}
- *
+ * <p>
  * SCHRITT 3: doGet() Methode überschreiben
  * - Wird automatisch bei GET-Anfragen aufgerufen
  * - Parameter: HttpServletRequest request, HttpServletResponse response
  * - throws IOException (Pflicht)
- *
+ * <p>
  * SCHRITT 4: Response konfigurieren
  * - setContentType("text/html;charset=UTF-8") für HTML-Ausgabe
  * - getWriter() um PrintWriter zu erhalten
- *
+ * <p>
  * SCHRITT 5: HTML ausgeben
  * - Einfache HTML-Struktur mit <!DOCTYPE>, <html>, <head>, <body>
  * - "Hello, World!" im Body anzeigen
- *
+ * <p>
  * SCHRITT 6: Testen
  * - Server starten
  * - Browser: http://localhost:8080/Java_J2EE-1.0-SNAPSHOT/hello-world
  * - Erwartung: "Hello, World!" wird angezeigt
- *
+ * <p>
  * WICHTIGE KONZEPTE:
  * - @WebServlet: Annotation für Servlet-Registrierung (seit Servlet 3.0)
  * - doGet(): Methode für HTTP GET-Requests

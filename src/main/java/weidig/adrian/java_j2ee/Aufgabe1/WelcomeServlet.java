@@ -11,37 +11,37 @@ import javax.servlet.annotation.*;
 
 /**
  * AUFGABE 1.3: WelcomeServlet (Teil 2)
- *
+ * <p>
  * ANFORDERUNGEN:
  * - Empfängt weitergeleiteten Request vom LoginServlet
  * - Zeigt Willkommensnachricht an
  * - Nutzt Daten die im Request-Scope gespeichert wurden
- *
+ * <p>
  * VORGEHEN ZUR LÖSUNG:
- *
+ * <p>
  * SCHRITT 1: WelcomeServlet erstellen
  * - @WebServlet mit value="/welcome-servlet"
  * - WICHTIG: URL muss mit der im LoginServlet übereinstimmen
- *
+ * <p>
  * SCHRITT 2: doPost() implementieren
  * - LoginServlet nutzt POST, also muss WelcomeServlet auch POST verarbeiten
  * - Alternativ: doGet() UND doPost() implementieren
- *
+ * <p>
  * SCHRITT 3: Daten aus Request auslesen
  * - request.getAttribute("username") → vom LoginServlet gesetzt
  * - request.getAttribute("loginTime") → vom LoginServlet gesetzt
  * - getAttribute() gibt Object zurück → casten nötig
- *
+ * <p>
  * SCHRITT 4: Willkommensnachricht ausgeben
  * - Personalisierte Begrüßung mit Benutzernamen
  * - Optional: Zeitstempel oder andere Infos anzeigen
- *
+ * <p>
  * WICHTIGE KONZEPTE:
  * - Request-Scope: Daten gelten nur für diesen Request
  * - getAttribute(): Liest vom LoginServlet gesetzte Attribute
  * - Unterschied zu getParameter():
- *   * getParameter(): Liest Form/URL-Parameter (String)
- *   * getAttribute(): Liest Servlet-Attribute (Object)
+ * * getParameter(): Liest Form/URL-Parameter (String)
+ * * getAttribute(): Liest Servlet-Attribute (Object)
  * - Type-Casting: getAttribute() gibt Object zurück
  */
 @WebServlet(name = "welcomeServlet", value = "/welcome-servlet")

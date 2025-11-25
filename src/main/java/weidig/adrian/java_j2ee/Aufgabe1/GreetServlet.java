@@ -9,38 +9,38 @@ import javax.servlet.annotation.*;
 
 /**
  * AUFGABE 1.2: GreetServlet
- *
+ * <p>
  * ANFORDERUNGEN:
  * - HTML-Formular mit Eingabefeld für Namen und Senden-Button
  * - Servlet empfängt den eingegebenen Namen
  * - Zeigt Nachricht "Hello, [Name]!" an
- *
+ * <p>
  * VORGEHEN ZUR LÖSUNG:
- *
+ * <p>
  * TEIL A: HTML-Formular erstellen (greet-form.html)
  * SCHRITT 1: Formular mit <form> Tag
  * - action="greet-servlet" → Ziel-URL
  * - method="GET" → HTTP-Methode
- *
+ * <p>
  * SCHRITT 2: Eingabefeld hinzufügen
  * - <input type="text" name="name">
  * - name="name" ist wichtig → wird als Parameter-Name verwendet
- *
+ * <p>
  * SCHRITT 3: Submit-Button
  * - <button type="submit">Senden</button>
- *
+ * <p>
  * TEIL B: GreetServlet erstellen
  * SCHRITT 1: Servlet-Klasse mit @WebServlet
  * - value = "/greet-servlet" (muss mit form action übereinstimmen)
- *
+ * <p>
  * SCHRITT 2: doGet() implementieren
  * - request.getParameter("name") → liest den Parameter aus
  * - Gibt den Namen mit "Hello, [Name]!" aus
- *
+ * <p>
  * SCHRITT 3: Fehlerbehandlung
  * - Was wenn kein Name eingegeben wurde?
  * - Standardwert oder Fehlermeldung anzeigen
- *
+ * <p>
  * WICHTIGE KONZEPTE:
  * - request.getParameter(): Liest Form-Parameter
  * - HTML Form action: Definiert Ziel-Servlet

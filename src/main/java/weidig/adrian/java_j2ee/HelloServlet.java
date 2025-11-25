@@ -10,32 +10,32 @@ import javax.servlet.annotation.*;
 
 /**
  * HelloServlet - Demonstriert alle Listener-Events
- *
+ * <p>
  * LIFECYCLE EVENTS die durch dieses Servlet ausgelöst werden:
- *
+ * <p>
  * 1. BEIM APPLICATION START (nur einmal):
- *    ✅ AppLifecycleListener.contextInitialized()
- *    ✅ AppAttributeListener.attributeAdded() (für startTime, appVersion)
- *
+ * ✅ AppLifecycleListener.contextInitialized()
+ * ✅ AppAttributeListener.attributeAdded() (für startTime, appVersion)
+ * <p>
  * 2. BEIM ERSTEN REQUEST (pro Benutzer):
- *    ✅ SessionLifecycleListener.sessionCreated()
- *
+ * ✅ SessionLifecycleListener.sessionCreated()
+ * <p>
  * 3. BEI JEDEM REQUEST:
- *    ✅ RequestLifecycleListener.requestInitialized()
- *    ✅ RequestAttributeListener.attributeAdded() (wenn setAttribute aufgerufen wird)
- *    ✅ RequestLifecycleListener.requestDestroyed()
- *
+ * ✅ RequestLifecycleListener.requestInitialized()
+ * ✅ RequestAttributeListener.attributeAdded() (wenn setAttribute aufgerufen wird)
+ * ✅ RequestLifecycleListener.requestDestroyed()
+ * <p>
  * 4. WENN SESSION-ATTRIBUTE GESETZT WERDEN:
- *    ✅ SessionAttributeListener.attributeAdded()
- *    ✅ SessionAttributeListener.attributeReplaced() (bei erneutem setAttribute)
- *
+ * ✅ SessionAttributeListener.attributeAdded()
+ * ✅ SessionAttributeListener.attributeReplaced() (bei erneutem setAttribute)
+ * <p>
  * 5. BEIM SESSION-TIMEOUT (nach 30 Min Inaktivität):
- *    ✅ SessionAttributeListener.attributeRemoved() (für alle Session-Attribute)
- *    ✅ SessionLifecycleListener.sessionDestroyed()
- *
+ * ✅ SessionAttributeListener.attributeRemoved() (für alle Session-Attribute)
+ * ✅ SessionLifecycleListener.sessionDestroyed()
+ * <p>
  * 6. BEIM APPLICATION STOP (nur einmal):
- *    ✅ AppAttributeListener.attributeRemoved() (für alle Context-Attribute)
- *    ✅ AppLifecycleListener.contextDestroyed()
+ * ✅ AppAttributeListener.attributeRemoved() (für alle Context-Attribute)
+ * ✅ AppLifecycleListener.contextDestroyed()
  */
 @WebServlet(name = "helloServlet", value = "/hello-servlet")
 public class HelloServlet extends HttpServlet {

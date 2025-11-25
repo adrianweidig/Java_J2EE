@@ -14,6 +14,12 @@ public class DebugLog {
     private static final List<String> events = new ArrayList<>();
     private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss.SSS");
 
+    /**
+     * Log.
+     *
+     * @param emoji   the emoji
+     * @param message the message
+     */
     public static void log(String emoji, String message) {
         String timestamp = LocalDateTime.now().format(formatter);
         String entry = String.format("[%s] %s %s", timestamp, emoji, message);
@@ -25,10 +31,18 @@ public class DebugLog {
         }
     }
 
+    /**
+     * Gets events.
+     *
+     * @return the events
+     */
     public static List<String> getEvents() {
         return new ArrayList<>(events);
     }
 
+    /**
+     * Clear.
+     */
     public static void clear() {
         events.clear();
     }

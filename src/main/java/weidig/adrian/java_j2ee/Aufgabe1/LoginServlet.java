@@ -10,43 +10,43 @@ import javax.servlet.annotation.*;
 
 /**
  * AUFGABE 1.3: LoginServlet mit Request-Weiterleitung
- *
+ * <p>
  * ANFORDERUNGEN:
  * - Zwei Servlets: LoginServlet und WelcomeServlet
  * - LoginServlet überprüft Benutzeranmeldung
  * - Bei erfolgreicher Anmeldung: Weiterleitung an WelcomeServlet
  * - WelcomeServlet zeigt Willkommensnachricht
- *
+ * <p>
  * VORGEHEN ZUR LÖSUNG:
- *
+ * <p>
  * SCHRITT 1: LoginServlet erstellen
  * - @WebServlet mit value="/login-servlet"
  * - doPost() Methode für Formular-Verarbeitung
- *
+ * <p>
  * SCHRITT 2: Credentials aus Request auslesen
  * - request.getParameter("username")
  * - request.getParameter("password")
- *
+ * <p>
  * SCHRITT 3: Validierung durchführen
  * - Prüfen ob Username und Passwort korrekt sind
  * - Beispiel: username="admin" und password="password123"
- *
+ * <p>
  * SCHRITT 4: Bei ERFOLG - Request weiterleiten
  * - request.setAttribute() → Daten an nächstes Servlet übergeben
  * - RequestDispatcher holen mit request.getRequestDispatcher()
  * - forward() aufrufen → Request an WelcomeServlet weiterleiten
- *
+ * <p>
  * SCHRITT 5: Bei FEHLER - Fehlermeldung anzeigen
  * - Direkt HTML-Fehlerseite ausgeben
  * - Oder zurück zum Login-Formular redirecten
- *
+ * <p>
  * WICHTIGE KONZEPTE:
  * - RequestDispatcher.forward(): Server-seitige Weiterleitung
  * - request.setAttribute(): Daten zwischen Servlets teilen
  * - POST-Methode: Für sensitive Daten wie Passwörter
  * - Unterschied forward vs redirect:
- *   * forward: Interne Weiterleitung, URL ändert sich nicht
- *   * redirect: Browser-Weiterleitung, URL ändert sich
+ * * forward: Interne Weiterleitung, URL ändert sich nicht
+ * * redirect: Browser-Weiterleitung, URL ändert sich
  */
 @WebServlet(name = "loginServlet", value = "/login-servlet")
 public class LoginServlet extends HttpServlet {

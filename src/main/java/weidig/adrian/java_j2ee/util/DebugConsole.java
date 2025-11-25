@@ -6,24 +6,24 @@ import java.util.List;
 
 /**
  * Wiederverwendbare Debug-Konsole für Servlets
- *
+ * <p>
  * VERWENDUNG:
- *
+ * <p>
  * 1. In doGet/doPost vor dem HTML-Ende:
- *    DebugConsole.render(out, request);
- *
+ * DebugConsole.render(out, request);
+ * <p>
  * 2. Automatisch:
- *    - Ausklappbare Konsole unten rechts
- *    - Zeigt alle DebugLog Events
- *    - CSS und JavaScript enthalten
- *    - Clear-Funktion integriert
+ * - Ausklappbare Konsole unten rechts
+ * - Zeigt alle DebugLog Events
+ * - CSS und JavaScript enthalten
+ * - Clear-Funktion integriert
  */
 public class DebugConsole {
 
     /**
      * Rendert die komplette Debug-Konsole
      *
-     * @param out PrintWriter vom Response
+     * @param out     PrintWriter vom Response
      * @param request HttpServletRequest für Clear-Action
      */
     public static void render(PrintWriter out, HttpServletRequest request) {

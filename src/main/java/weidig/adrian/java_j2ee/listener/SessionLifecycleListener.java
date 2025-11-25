@@ -35,6 +35,11 @@ public class SessionLifecycleListener implements HttpSessionListener {
         DebugLog.log("💀", "SESSION zerstört - Verbleibend: " + sessionCount + " (ID: " + sessionId + "...)");
     }
 
+    /**
+     * Gets active session count.
+     *
+     * @return the active session count
+     */
     public static int getActiveSessionCount() {
         return activeSessions.get();
     }

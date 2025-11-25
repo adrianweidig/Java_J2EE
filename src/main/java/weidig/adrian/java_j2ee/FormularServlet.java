@@ -10,7 +10,7 @@ import javax.servlet.annotation.*;
 
 /**
  * FormularServlet - Demonstriert Formularverarbeitung in J2EE
- *
+ * <p>
  * FUNKTIONEN:
  * - Formular-Anzeige (GET)
  * - Formular-Verarbeitung (POST)
@@ -20,7 +20,7 @@ import javax.servlet.annotation.*;
  * - File-Upload Simulation
  * - Session-basierte Datenspeicherung
  * - Erfolgs- und Fehlermeldungen
- *
+ * <p>
  * VALIDIERUNGS-REGELN:
  * - Name: Pflichtfeld, min. 2 Zeichen
  * - E-Mail: Pflichtfeld, valides Format
