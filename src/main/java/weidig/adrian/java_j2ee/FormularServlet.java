@@ -1,5 +1,6 @@
 package weidig.adrian.java_j2ee;
 
+import weidig.adrian.java_j2ee.util.DebugConsole;
 import weidig.adrian.java_j2ee.util.DebugLog;
 
 import java.io.*;
@@ -52,7 +53,7 @@ public class FormularServlet extends HttpServlet {
         HttpSession session = request.getSession();
 
         PrintWriter out = response.getWriter();
-        outputHTML(out, session, null, null);
+        outputHTML(out, request, session, null, null);
     }
 
     /**
@@ -110,7 +111,7 @@ public class FormularServlet extends HttpServlet {
             }
 
             PrintWriter out = response.getWriter();
-            outputHTML(out, session, errors, formData);
+            outputHTML(out, request, session, errors, formData);
             return;
         }
 
@@ -186,7 +187,7 @@ public class FormularServlet extends HttpServlet {
     /**
      * Generiert die HTML-Ausgabe
      */
-    private void outputHTML(PrintWriter out, HttpSession session,
+    private void outputHTML(PrintWriter out, HttpServletRequest request, HttpSession session,
                             Map<String, String> errors, Map<String, String> formData) {
 
         // Erfolgsmeldung prüfen
@@ -233,6 +234,7 @@ public class FormularServlet extends HttpServlet {
 
         out.println("    </div>");
         out.println("</body>");
+        DebugConsole.render(out, request);
         out.println("</html>");
     }
 

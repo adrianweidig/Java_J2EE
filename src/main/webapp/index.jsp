@@ -42,10 +42,21 @@
             opacity: 0.9;
         }
 
+        /* Kategorie-Header */
+        .category-header {
+            color: white;
+            font-size: 1.5rem;
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            animation: fadeInUp 0.8s ease;
+        }
+
         .menu-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
+            margin-bottom: 30px;
             animation: fadeInUp 0.8s ease 0.2s both;
         }
 
@@ -114,6 +125,10 @@
 
         .menu-card.new .badge {
             background: #4CAF50;
+        }
+
+        .menu-card.exercise .badge {
+            background: #ff9800;
         }
 
         .menu-card.coming-soon {
@@ -205,6 +220,40 @@
         <p>Willkommen zum Java Enterprise Edition Lernprojekt</p>
     </div>
 
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- KATEGORIE: Aufgaben (Servlet Teil I) -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <h2 class="category-header">📚 Aufgaben - Java EE Servlets Teil I</h2>
+    <div class="menu-grid">
+        <!-- Aufgabe 1.1 -->
+        <a href="hello-world" class="menu-card exercise">
+            <span class="icon">👋</span>
+            <h3>Aufgabe 1.1: HelloWorld</h3>
+            <p>Einfaches GET-Servlet mit "Hello, World!" Ausgabe</p>
+            <span class="badge">Aufgabe 1.1</span>
+        </a>
+
+        <!-- Aufgabe 1.2 -->
+        <a href="greet-form.html" class="menu-card exercise">
+            <span class="icon">🎯</span>
+            <h3>Aufgabe 1.2: Greet Form</h3>
+            <p>Formular mit Name-Eingabe und personalisierter Begrüßung</p>
+            <span class="badge">Aufgabe 1.2</span>
+        </a>
+
+        <!-- Aufgabe 1.3 -->
+        <a href="login-form.html" class="menu-card exercise">
+            <span class="icon">🔐</span>
+            <h3>Aufgabe 1.3: Login System</h3>
+            <p>Login mit Request-Weiterleitung (forward) vom LoginServlet zum WelcomeServlet</p>
+            <span class="badge">Aufgabe 1.3</span>
+        </a>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- KATEGORIE: Demo-Anwendungen -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <h2 class="category-header">🚀 Demo-Anwendungen</h2>
     <div class="menu-grid">
         <!-- HelloServlet -->
         <a href="hello-servlet" class="menu-card">
@@ -229,7 +278,13 @@
             <p>Interaktive Demonstration aller Servlet-Listener</p>
             <span class="badge">Bald verfügbar</span>
         </a>
+    </div>
 
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- KATEGORIE: Erweiterte Features -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <h2 class="category-header">⚡ Erweiterte Features</h2>
+    <div class="menu-grid">
         <!-- Session Management -->
         <a href="session-demo" class="menu-card coming-soon">
             <span class="icon">🔐</span>
@@ -287,7 +342,7 @@
             Version 1.0-SNAPSHOT
         </p>
         <p style="margin-top: 10px; font-size: 0.9rem;">
-            💡 Tipp: Prüfe die Server-Logs für detaillierte Listener-Events
+            💡 Tipp: Alle Aufgaben-Servlets nutzen @WebServlet Annotationen
         </p>
     </div>
 </div>
