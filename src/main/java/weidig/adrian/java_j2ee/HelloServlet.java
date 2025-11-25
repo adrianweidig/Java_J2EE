@@ -1,12 +1,16 @@
 package weidig.adrian.java_j2ee;
 
+import weidig.adrian.java_j2ee.listener.SessionLifecycleListener;
 import weidig.adrian.java_j2ee.util.DebugConsole;
 import weidig.adrian.java_j2ee.util.DebugLog;
-import weidig.adrian.java_j2ee.listener.SessionLifecycleListener;
 
-import java.io.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 /**
  * HelloServlet - Demonstriert alle Listener-Events
@@ -77,9 +81,9 @@ public class HelloServlet extends HttpServlet {
         String appVersion = (String) getServletContext().getAttribute("appVersion");
         long uptime = (System.currentTimeMillis() - startTime) / 1000;
 
-        // ═══════════════════════════════════════════════════════════
+
         // HTML AUSGABE mit Live-Events
-        // ═══════════════════════════════════════════════════════════
+
         PrintWriter out = response.getWriter();
         out.println("<!DOCTYPE html>");
         out.println("<html>");

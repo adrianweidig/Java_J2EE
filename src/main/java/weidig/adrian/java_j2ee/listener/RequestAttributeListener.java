@@ -1,9 +1,10 @@
 package weidig.adrian.java_j2ee.listener;
 
+import weidig.adrian.java_j2ee.util.DebugLog;
+
 import javax.servlet.ServletRequestAttributeEvent;
 import javax.servlet.ServletRequestAttributeListener;
 import javax.servlet.annotation.WebListener;
-import weidig.adrian.java_j2ee.util.DebugLog;
 
 /**
  * Überwacht Änderungen an Request-Attributen

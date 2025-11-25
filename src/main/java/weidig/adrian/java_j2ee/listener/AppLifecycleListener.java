@@ -1,9 +1,10 @@
 package weidig.adrian.java_j2ee.listener;
 
+import weidig.adrian.java_j2ee.util.DebugLog;
+
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
-import weidig.adrian.java_j2ee.util.DebugLog;
 
 /**
  * Überwacht den Lifecycle der gesamten Webanwendung

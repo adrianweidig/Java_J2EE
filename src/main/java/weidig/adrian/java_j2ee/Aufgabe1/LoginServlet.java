@@ -1,12 +1,15 @@
 package weidig.adrian.java_j2ee.Aufgabe1;
 
 import weidig.adrian.java_j2ee.util.DebugLog;
-import weidig.adrian.java_j2ee.util.DebugConsole;
 
-import java.io.*;
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 /**
  * AUFGABE 1.3: LoginServlet mit Request-Weiterleitung
@@ -64,7 +67,7 @@ public class LoginServlet extends HttpServlet {
     /**
      * DOPOST-METHODE
      * Verarbeitet Login-Formular und leitet bei Erfolg weiter
-     *
+     * <p>
      * WICHTIG: POST statt GET für Login-Daten!
      * - GET: Parameter sichtbar in URL → unsicher
      * - POST: Parameter im Request-Body → sicherer
@@ -86,9 +89,9 @@ public class LoginServlet extends HttpServlet {
         boolean isValid = validateCredentials(username, password);
 
         if (isValid) {
-            // ═══════════════════════════════════════════════════════════
+
             // ERFOLG: Credentials korrekt
-            // ═══════════════════════════════════════════════════════════
+
 
             DebugLog.log("✅", "Login erfolgreich für: " + username);
 
@@ -110,9 +113,9 @@ public class LoginServlet extends HttpServlet {
             DebugLog.log("➡️", "Request an WelcomeServlet weitergeleitet");
 
         } else {
-            // ═══════════════════════════════════════════════════════════
+
             // FEHLER: Credentials falsch
-            // ═══════════════════════════════════════════════════════════
+
 
             DebugLog.log("❌", "Login fehlgeschlagen für: " + username);
 

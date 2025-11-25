@@ -6,13 +6,15 @@
 [![Build Tool](https://img.shields.io/badge/Build-Gradle-02303A.svg)](https://gradle.org/)
 [![License](https://img.shields.io/badge/License-Educational-yellow.svg)]()
 
-> **Ein vollständiges Java EE 8 Lernprojekt** basierend auf dem Lehrgang "Professionell entwickeln mit Java EE 8" (Rheinwerk Verlag) und dem Bundeswehr-Lehrgang 8606 "Java für Fortgeschrittene Teil 2".
+> **Ein vollständiges Java EE 8 Lernprojekt** basierend auf dem Lehrgang "Professionell entwickeln mit Java EE 8" (
+> Rheinwerk Verlag) und dem Bundeswehr-Lehrgang 8606 "Java für Fortgeschrittene Teil 2".
 
 ---
 
 ## 📖 Über dieses Projekt
 
-Dieses Repository enthält eine **vollständige Java EE 8 Enterprise-Anwendung**, die als **Bücherverwaltungssystem (Bookstore)** implementiert wurde. Das Projekt dient als:
+Dieses Repository enthält eine **vollständige Java EE 8 Enterprise-Anwendung**, die als **Bücherverwaltungssystem (
+Bookstore)** implementiert wurde. Das Projekt dient als:
 
 - ✅ **Lernvorlage** für Java EE 8 Entwicklung
 - ✅ **Praktische Referenz** für alle wichtigen Java EE 8 Technologien
@@ -22,7 +24,8 @@ Dieses Repository enthält eine **vollständige Java EE 8 Enterprise-Anwendung**
 
 ### 🎯 Projektziel
 
-Das Ziel ist es, komplexe Java EE-Anwendungen unter Verwendung bereits bestehender Software-Komponenten (JavaBeans) zu entwickeln und dabei:
+Das Ziel ist es, komplexe Java EE-Anwendungen unter Verwendung bereits bestehender Software-Komponenten (JavaBeans) zu
+entwickeln und dabei:
 
 - JavaBeans als intelligente Frontend-Komponenten zu Datenbankservern einzusetzen
 - Verteilte Applikationen zu erstellen
@@ -85,19 +88,20 @@ bookstore/
 
 ### 🔧 Kern-Technologien
 
-| Technologie | Version | Beschreibung |
-|-------------|---------|--------------|
-| **Java SE** | 8 (Update 144+) | Programmiersprache |
-| **Jakarta EE** | 8.0 | Enterprise Edition |
-| **GlassFish** | 5.1.0 | Application Server |
-| **Gradle** | 7.x | Build-Tool |
-| **H2 Database** | 2.2.224 | Embedded Datenbank (Test) |
+| Technologie     | Version         | Beschreibung              |
+|-----------------|-----------------|---------------------------|
+| **Java SE**     | 8 (Update 144+) | Programmiersprache        |
+| **Jakarta EE**  | 8.0             | Enterprise Edition        |
+| **GlassFish**   | 5.1.0           | Application Server        |
+| **Gradle**      | 7.x             | Build-Tool                |
+| **H2 Database** | 2.2.224         | Embedded Datenbank (Test) |
 
 ### 📦 Java EE 8 Spezifikationen
 
 Dieses Projekt nutzt folgende Java EE 8 APIs:
 
 #### Web-Technologien
+
 - **Servlets 4.0** - HTTP Request/Response Verarbeitung
 - **JSP 2.3** - Java Server Pages
 - **JSF 2.3** - Java Server Faces (Facelets)
@@ -105,22 +109,26 @@ Dieses Projekt nutzt folgende Java EE 8 APIs:
 - **Expression Language 3.0** - Template-Sprache
 
 #### Business-Komponenten
+
 - **EJB 3.2** - Enterprise JavaBeans
 - **CDI 2.0** - Dependency Injection
 - **Bean Validation 2.0** - Validierung
 
 #### Persistenz
+
 - **JPA 2.2** - Java Persistence API
 - **JDBC 4.2** - Datenbankverbindungen
 - **JTA 1.2** - Transaktionsverwaltung
 
 #### Web Services
+
 - **JAX-RS 2.1** - RESTful Web Services
 - **JAX-WS 2.2** - SOAP Web Services
 - **JSON-P 1.1** - JSON Processing
 - **JSON-B 1.0** - JSON Binding
 
 #### Weitere APIs
+
 - **JMS 2.0** - Messaging
 - **JavaMail 1.6** - E-Mail
 
@@ -136,28 +144,31 @@ Dieses Projekt nutzt folgende Java EE 8 APIs:
 
 ### Software-Anforderungen
 
-| Software | Version | Download |
-|----------|---------|----------|
-| **JDK** | Java 8 Update 144+ | [Adoptium](https://adoptium.net/) |
-| **GlassFish** | 5.1.0 | [GlassFish Download](https://glassfish.org/download) |
-| **IntelliJ IDEA** | Ultimate 2023+ | [JetBrains](https://www.jetbrains.com/idea/) |
-| **Gradle** | 7.x (via Wrapper) | Automatisch enthalten |
+| Software          | Version            | Download                                             |
+|-------------------|--------------------|------------------------------------------------------|
+| **JDK**           | Java 8 Update 144+ | [Adoptium](https://adoptium.net/)                    |
+| **GlassFish**     | 5.1.0              | [GlassFish Download](https://glassfish.org/download) |
+| **IntelliJ IDEA** | Ultimate 2023+     | [JetBrains](https://www.jetbrains.com/idea/)         |
+| **Gradle**        | 7.x (via Wrapper)  | Automatisch enthalten                                |
 
 ### 🎓 Erforderliche Kenntnisse
 
 Dieses Projekt setzt voraus:
 
 ✅ **Java-Grundlagen** (Lehrgang 8604)
+
 - Objektorientierte Programmierung
 - Vererbung, Interfaces, Polymorphie
 - Collections, Exceptions, I/O
 
 ✅ **Java für Fortgeschrittene Teil 1** (Lehrgang 8605)
+
 - JDBC
 - Threads
 - Netzwerkprogrammierung
 
 ✅ **Grundkenntnisse in:**
+
 - HTML/CSS
 - SQL
 - HTTP-Protokoll
@@ -176,6 +187,7 @@ cd bookstore
 ### Schritt 2: JDK installieren
 
 **Windows:**
+
 1. Download JDK 8 Update 144+ von [Adoptium](https://adoptium.net/)
 2. Installieren mit Standard-Einstellungen
 3. Umgebungsvariablen setzen:
@@ -186,6 +198,7 @@ cd bookstore
 4. Prüfen: `java -version` in CMD
 
 **Mac / Linux:**
+
 ```bash
 # Ubuntu/Debian
 sudo apt-get install openjdk-8-jdk
@@ -265,11 +278,13 @@ gradlew.bat clean build
 ### Schritt 6: Anwendung starten
 
 **In IntelliJ:**
+
 1. GlassFish-Konfiguration auswählen (oben rechts)
 2. Grünen Play-Button ▶️ klicken
 3. Browser öffnet automatisch: `http://localhost:8080/bookstore`
 
 **Manuell (Kommandozeile):**
+
 ```bash
 # GlassFish starten
 cd /opt/glassfish5/bin
@@ -289,29 +304,34 @@ http://localhost:8080/bookstore
 Dieses Projekt deckt folgende Themen des Lehrgangs ab:
 
 ### 1️⃣ Einführung in J2EE
+
 - Java EE 8 Überblick
 - Architektur und Komponenten
 - Mehrschichtige Anwendungen
 
 ### 2️⃣ Entwicklungsumgebung
+
 - JDK Installation
 - GlassFish Server Setup
 - Eclipse/IntelliJ Integration
 - Maven/Gradle Build-Tools
 
 ### 3️⃣ Servlets
+
 - HTTP Request/Response
 - Lebenszyklus
 - Session Management
 - Filter und Listener
 
 ### 4️⃣ Java Server Pages (JSP)
+
 - JSP-Syntax
 - Expression Language
 - JSTL (Java Standard Tag Library)
 - Custom Tags
 
 ### 5️⃣ Java Persistence API (JPA)
+
 - Entity-Klassen
 - EntityManager
 - JPQL (Java Persistence Query Language)
@@ -319,12 +339,14 @@ Dieses Projekt deckt folgende Themen des Lehrgangs ab:
 - Transaktionen
 
 ### 6️⃣ Enterprise JavaBeans (EJB)
+
 - Stateless Session Beans
 - Stateful Session Beans
 - Singleton Session Beans
 - Message-Driven Beans
 
 ### 7️⃣ Java Server Faces (JSF)
+
 - Facelets
 - Managed Beans
 - Navigation
@@ -332,6 +354,7 @@ Dieses Projekt deckt folgende Themen des Lehrgangs ab:
 - Ajax
 
 ### 8️⃣ Praktische Übungen
+
 - CRUD-Operationen
 - Formularverarbeitung
 - Datenbankintegration
@@ -344,20 +367,25 @@ Dieses Projekt deckt folgende Themen des Lehrgangs ab:
 Dieses Projekt basiert auf:
 
 ### 📖 Hauptquelle
+
 **"Professionell entwickeln mit Java EE 8"**
+
 - Autor: Alexander Salvanos
 - Verlag: Rheinwerk Verlag
 - ISBN: 978-3-8362-5430-4
 - [Verlagsseite](https://www.rheinwerk-verlag.de/4243)
 
 ### 🎓 Lehrgang
+
 **Bundeswehr-Lehrgang 8606**
+
 - "Java für Fortgeschrittene Teil 2"
 - Programmierung mit Java J2EE
 - Dauer: 10 Tage
 - Bundesamt für Ausrüstung, Informationstechnik und Nutzung
 
 ### 🌐 Offizielle Dokumentationen
+
 - [Jakarta EE 8 Specification](https://jakarta.ee/specifications/platform/8/)
 - [GlassFish Documentation](https://glassfish.org/documentation)
 - [JPA 2.2 Specification](https://jcp.org/en/jsr/detail?id=338)
@@ -516,6 +544,7 @@ Verbesserungen und Beiträge sind willkommen!
 ### Problem: "Port 8080 already in use"
 
 **Lösung:**
+
 ```bash
 # Prozess finden
 netstat -ano | findstr 8080
@@ -529,6 +558,7 @@ taskkill /PID <PID> /F
 ### Problem: "java.lang.ClassNotFoundException"
 
 **Lösung:**
+
 ```bash
 # Gradle Dependencies neu laden
 ./gradlew clean build --refresh-dependencies
@@ -539,6 +569,7 @@ taskkill /PID <PID> /F
 ### Problem: "No valid GlassFish home"
 
 **Lösung:**
+
 - Prüfe Pfad (keine Leerzeichen!)
 - Richtig entpackt? (Ordner muss `bin/`, `glassfish/`, `mq/` enthalten)
 - GlassFish Home = Hauptordner (nicht `glassfish/` Subfolder!)

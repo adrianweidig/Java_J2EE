@@ -1,10 +1,11 @@
 package weidig.adrian.java_j2ee.listener;
 
+import weidig.adrian.java_j2ee.util.DebugLog;
+
 import javax.servlet.annotation.WebListener;
 import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 import java.util.concurrent.atomic.AtomicInteger;
-import weidig.adrian.java_j2ee.util.DebugLog;
 
 /**
  * Überwacht HTTP-Sessions
@@ -15,6 +16,15 @@ import weidig.adrian.java_j2ee.util.DebugLog;
 public class SessionLifecycleListener implements HttpSessionListener {
 
     private static final AtomicInteger activeSessions = new AtomicInteger(0);
+
+    /**
+     * Gets active session count.
+     *
+     * @return the active session count
+     */
+    public static int getActiveSessionCount() {
+        return activeSessions.get();
+    }
 
     @Override
     public void sessionCreated(HttpSessionEvent se) {
@@ -33,14 +43,5 @@ public class SessionLifecycleListener implements HttpSessionListener {
         String sessionId = se.getSession().getId().substring(0, 8);
 
         DebugLog.log("💀", "SESSION zerstört - Verbleibend: " + sessionCount + " (ID: " + sessionId + "...)");
-    }
-
-    /**
-     * Gets active session count.
-     *
-     * @return the active session count
-     */
-    public static int getActiveSessionCount() {
-        return activeSessions.get();
     }
 }

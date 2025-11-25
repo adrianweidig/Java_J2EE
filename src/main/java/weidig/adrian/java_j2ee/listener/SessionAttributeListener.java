@@ -1,9 +1,10 @@
 package weidig.adrian.java_j2ee.listener;
 
+import weidig.adrian.java_j2ee.util.DebugLog;
+
 import javax.servlet.annotation.WebListener;
 import javax.servlet.http.HttpSessionAttributeListener;
 import javax.servlet.http.HttpSessionBindingEvent;
-import weidig.adrian.java_j2ee.util.DebugLog;
 
 /**
  * Überwacht Änderungen an Session-Attributen

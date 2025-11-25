@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Aufgabe 1.3 - Login</title>
     <style>
         * {
@@ -143,22 +143,22 @@
         <div class="form-group">
             <label for="username">Benutzername:</label>
             <input
-                    type="text"
+                    autofocus
                     id="username"
                     name="username"
                     placeholder="admin"
                     required
-                    autofocus>
+                    type="text">
         </div>
 
         <div class="form-group">
             <label for="password">Passwort:</label>
             <input
-                    type="password"
                     id="password"
                     name="password"
                     placeholder="••••••"
-                    required>
+                    required
+                    type="password">
         </div>
 
         <button type="submit">Anmelden</button>
@@ -175,7 +175,7 @@
         </p>
     </div>
 
-    <a href="." class="back-link">← Zurück zur Startseite</a>
+    <a class="back-link" href=".">← Zurück zur Startseite</a>
 </div>
 </body>
 </html>

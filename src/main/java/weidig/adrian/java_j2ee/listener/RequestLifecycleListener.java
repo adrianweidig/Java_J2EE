@@ -1,10 +1,11 @@
 package weidig.adrian.java_j2ee.listener;
 
+import weidig.adrian.java_j2ee.util.DebugLog;
+
 import javax.servlet.ServletRequestEvent;
 import javax.servlet.ServletRequestListener;
 import javax.servlet.annotation.WebListener;
 import javax.servlet.http.HttpServletRequest;
-import weidig.adrian.java_j2ee.util.DebugLog;
 
 /**
  * Überwacht jeden einzelnen HTTP-Request

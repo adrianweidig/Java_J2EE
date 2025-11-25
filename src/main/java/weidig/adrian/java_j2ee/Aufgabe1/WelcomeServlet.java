@@ -1,13 +1,16 @@
 package weidig.adrian.java_j2ee.Aufgabe1;
 
-import weidig.adrian.java_j2ee.util.DebugLog;
 import weidig.adrian.java_j2ee.util.DebugConsole;
+import weidig.adrian.java_j2ee.util.DebugLog;
 
-import java.io.*;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
 
 /**
  * AUFGABE 1.3: WelcomeServlet (Teil 2)
@@ -55,7 +58,7 @@ public class WelcomeServlet extends HttpServlet {
     /**
      * DOPOST-METHODE
      * Empfängt weitergeleiteten Request vom LoginServlet
-     *
+     * <p>
      * WICHTIG: LoginServlet nutzt forward(), nicht redirect()
      * - forward() behält HTTP-Methode bei (POST bleibt POST)
      * - redirect() würde GET verwenden

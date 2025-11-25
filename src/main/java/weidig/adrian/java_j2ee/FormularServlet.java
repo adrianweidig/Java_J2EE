@@ -3,10 +3,16 @@ package weidig.adrian.java_j2ee;
 import weidig.adrian.java_j2ee.util.DebugConsole;
 import weidig.adrian.java_j2ee.util.DebugLog;
 
-import java.io.*;
-import java.util.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * FormularServlet - Demonstriert Formularverarbeitung in J2EE
@@ -70,9 +76,9 @@ public class FormularServlet extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setContentType("text/html;charset=UTF-8");
 
-        // ═══════════════════════════════════════════════════════════
+
         // SCHRITT 1: Formulardaten auslesen
-        // ═══════════════════════════════════════════════════════════
+
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String alterStr = request.getParameter("alter");
@@ -84,9 +90,9 @@ public class FormularServlet extends HttpServlet {
 
         DebugLog.log("📋", "Formulardaten empfangen: Name=" + name + ", Email=" + email);
 
-        // ═══════════════════════════════════════════════════════════
+
         // SCHRITT 2: Validierung
-        // ═══════════════════════════════════════════════════════════
+
         Map<String, String> errors = validateForm(name, email, alterStr, geschlecht,
                 interessen, nachricht);
 
@@ -115,9 +121,9 @@ public class FormularServlet extends HttpServlet {
             return;
         }
 
-        // ═══════════════════════════════════════════════════════════
+
         // SCHRITT 3: Daten verarbeiten (erfolgreich validiert)
-        // ═══════════════════════════════════════════════════════════
+
         DebugLog.log("✅", "Formular erfolgreich validiert und verarbeitet");
 
         // In Session speichern (simuliert Datenbank)
@@ -131,6 +137,7 @@ public class FormularServlet extends HttpServlet {
 
     /**
      * Validiert alle Formularfelder
+     *
      * @return Map mit Fehlermeldungen (leer wenn alles OK)
      */
     private Map<String, String> validateForm(String name, String email, String alterStr,
