@@ -73,8 +73,7 @@ public class LoginServlet extends HttpServlet {
      * - POST: Parameter im Request-Body → sicherer
      */
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         DebugLog.log("🔐", "LoginServlet.doPost() - Login-Versuch");
 
@@ -115,8 +114,6 @@ public class LoginServlet extends HttpServlet {
         } else {
 
             // FEHLER: Credentials falsch
-
-
             DebugLog.log("❌", "Login fehlgeschlagen für: " + username);
 
             // Fehlerseite direkt ausgeben
@@ -146,8 +143,7 @@ public class LoginServlet extends HttpServlet {
      * HILFSMETHODE: Fehlerseite ausgeben
      * Zeigt schöne Fehlerseite bei fehlgeschlagenem Login
      */
-    private void showErrorPage(HttpServletResponse response, String username)
-            throws IOException {
+    private void showErrorPage(HttpServletResponse response, String username) throws IOException {
 
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
@@ -239,11 +235,7 @@ public class LoginServlet extends HttpServlet {
      */
     private String escapeHtml(String text) {
         if (text == null) return "";
-        return text.replace("&", "&amp;")
-                .replace("<", "&lt;")
-                .replace(">", "&gt;")
-                .replace("\"", "&quot;")
-                .replace("'", "&#39;");
+        return text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace("\"", "&quot;").replace("'", "&#39;");
     }
 
     @Override

@@ -63,8 +63,7 @@ public class GreetServlet extends HttpServlet {
      * Empfängt den Namen aus dem Formular und zeigt Begrüßung an
      */
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         DebugLog.log("📝", "GreetServlet.doGet() aufgerufen");
 
@@ -187,11 +186,7 @@ public class GreetServlet extends HttpServlet {
      */
     private String escapeHtml(String text) {
         if (text == null) return "";
-        return text.replace("&", "&amp;")
-                .replace("<", "&lt;")
-                .replace(">", "&gt;")
-                .replace("\"", "&quot;")
-                .replace("'", "&#39;");
+        return text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace("\"", "&quot;").replace("'", "&#39;");
     }
 
     @Override

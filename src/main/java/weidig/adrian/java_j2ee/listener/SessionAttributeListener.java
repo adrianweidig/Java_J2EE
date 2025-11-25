@@ -18,22 +18,19 @@ public class SessionAttributeListener implements HttpSessionAttributeListener {
     @Override
     public void attributeAdded(HttpSessionBindingEvent se) {
         String sessionId = se.getSession().getId().substring(0, 8); // Nur erste 8 Zeichen für bessere Lesbarkeit
-        DebugLog.log("📝", "Session-Attribut HINZUGEFÜGT: " + se.getName() + " = " + se.getValue() +
-                " (Session: " + sessionId + "...)");
+        DebugLog.log("📝", "Session-Attribut HINZUGEFÜGT: " + se.getName() + " = " + se.getValue() + " (Session: " + sessionId + "...)");
     }
 
     @Override
     public void attributeRemoved(HttpSessionBindingEvent se) {
         String sessionId = se.getSession().getId().substring(0, 8);
-        DebugLog.log("🗑️", "Session-Attribut ENTFERNT: " + se.getName() +
-                " (Session: " + sessionId + "...)");
+        DebugLog.log("🗑️", "Session-Attribut ENTFERNT: " + se.getName() + " (Session: " + sessionId + "...)");
     }
 
     @Override
     public void attributeReplaced(HttpSessionBindingEvent se) {
         String sessionId = se.getSession().getId().substring(0, 8);
         Object newValue = se.getSession().getAttribute(se.getName());
-        DebugLog.log("🔄", "Session-Attribut ERSETZT: " + se.getName() +
-                " (alt: " + se.getValue() + " → neu: " + newValue + ", Session: " + sessionId + "...)");
+        DebugLog.log("🔄", "Session-Attribut ERSETZT: " + se.getName() + " (alt: " + se.getValue() + " → neu: " + newValue + ", Session: " + sessionId + "...)");
     }
 }

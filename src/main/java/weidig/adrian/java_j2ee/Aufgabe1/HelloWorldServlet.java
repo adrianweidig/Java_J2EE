@@ -76,8 +76,7 @@ public class HelloWorldServlet extends HttpServlet {
      * @throws IOException Wenn Ausgabe fehlschlägt
      */
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         DebugLog.log("📝", "HelloWorldServlet.doGet() aufgerufen");
 

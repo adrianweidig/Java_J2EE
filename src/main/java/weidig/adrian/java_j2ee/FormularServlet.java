@@ -48,8 +48,7 @@ public class FormularServlet extends HttpServlet {
      * Wird aufgerufen wenn User die Seite das erste Mal besucht
      */
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         DebugLog.log("📝", "FormularServlet.doGet() - Formular wird angezeigt");
 
@@ -67,15 +66,13 @@ public class FormularServlet extends HttpServlet {
      * Wird aufgerufen wenn User auf "Absenden" klickt
      */
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         DebugLog.log("✉️", "FormularServlet.doPost() - Formular wird verarbeitet");
 
         // UTF-8 Encoding für Umlaute
         request.setCharacterEncoding("UTF-8");
         response.setContentType("text/html;charset=UTF-8");
-
 
         // SCHRITT 1: Formulardaten auslesen
 
@@ -93,8 +90,7 @@ public class FormularServlet extends HttpServlet {
 
         // SCHRITT 2: Validierung
 
-        Map<String, String> errors = validateForm(name, email, alterStr, geschlecht,
-                interessen, nachricht);
+        Map<String, String> errors = validateForm(name, email, alterStr, geschlecht, interessen, nachricht);
 
         HttpSession session = request.getSession();
 
@@ -140,9 +136,7 @@ public class FormularServlet extends HttpServlet {
      *
      * @return Map mit Fehlermeldungen (leer wenn alles OK)
      */
-    private Map<String, String> validateForm(String name, String email, String alterStr,
-                                             String geschlecht, String[] interessen,
-                                             String nachricht) {
+    private Map<String, String> validateForm(String name, String email, String alterStr, String geschlecht, String[] interessen, String nachricht) {
         Map<String, String> errors = new HashMap<>();
 
         // Name Validierung
@@ -194,8 +188,7 @@ public class FormularServlet extends HttpServlet {
     /**
      * Generiert die HTML-Ausgabe
      */
-    private void outputHTML(PrintWriter out, HttpServletRequest request, HttpSession session,
-                            Map<String, String> errors, Map<String, String> formData) {
+    private void outputHTML(PrintWriter out, HttpServletRequest request, HttpSession session, Map<String, String> errors, Map<String, String> formData) {
 
         // Erfolgsmeldung prüfen
         boolean showSuccess = session.getAttribute("formular_name") != null;
@@ -248,8 +241,7 @@ public class FormularServlet extends HttpServlet {
     /**
      * Generiert das Formular
      */
-    private void outputForm(PrintWriter out, Map<String, String> errors,
-                            Map<String, String> formData) {
+    private void outputForm(PrintWriter out, Map<String, String> errors, Map<String, String> formData) {
 
         // Fehlerzusammenfassung
         if (errors != null && !errors.isEmpty()) {
@@ -302,12 +294,9 @@ public class FormularServlet extends HttpServlet {
         out.println("            <div class='form-group" + (hasError(errors, "geschlecht") ? " error" : "") + "'>");
         out.println("                <label>Geschlecht *</label>");
         out.println("                <div class='radio-group'>");
-        out.println("                    <label><input type='radio' name='geschlecht' value='m' " +
-                (isChecked(formData, "geschlecht", "m") ? "checked" : "") + "> Männlich</label>");
-        out.println("                    <label><input type='radio' name='geschlecht' value='w' " +
-                (isChecked(formData, "geschlecht", "w") ? "checked" : "") + "> Weiblich</label>");
-        out.println("                    <label><input type='radio' name='geschlecht' value='d' " +
-                (isChecked(formData, "geschlecht", "d") ? "checked" : "") + "> Divers</label>");
+        out.println("                    <label><input type='radio' name='geschlecht' value='m' " + (isChecked(formData, "geschlecht", "m") ? "checked" : "") + "> Männlich</label>");
+        out.println("                    <label><input type='radio' name='geschlecht' value='w' " + (isChecked(formData, "geschlecht", "w") ? "checked" : "") + "> Weiblich</label>");
+        out.println("                    <label><input type='radio' name='geschlecht' value='d' " + (isChecked(formData, "geschlecht", "d") ? "checked" : "") + "> Divers</label>");
         out.println("                </div>");
         if (hasError(errors, "geschlecht")) {
             out.println("                <span class='error-message'>" + errors.get("geschlecht") + "</span>");
@@ -318,14 +307,10 @@ public class FormularServlet extends HttpServlet {
         out.println("            <div class='form-group" + (hasError(errors, "interessen") ? " error" : "") + "'>");
         out.println("                <label>Interessen * (mehrfach möglich)</label>");
         out.println("                <div class='checkbox-group'>");
-        out.println("                    <label><input type='checkbox' name='interessen' value='programmierung' " +
-                (isInterestChecked(formData, "programmierung") ? "checked" : "") + "> Programmierung</label>");
-        out.println("                    <label><input type='checkbox' name='interessen' value='design' " +
-                (isInterestChecked(formData, "design") ? "checked" : "") + "> Design</label>");
-        out.println("                    <label><input type='checkbox' name='interessen' value='datenbanken' " +
-                (isInterestChecked(formData, "datenbanken") ? "checked" : "") + "> Datenbanken</label>");
-        out.println("                    <label><input type='checkbox' name='interessen' value='netzwerke' " +
-                (isInterestChecked(formData, "netzwerke") ? "checked" : "") + "> Netzwerke</label>");
+        out.println("                    <label><input type='checkbox' name='interessen' value='programmierung' " + (isInterestChecked(formData, "programmierung") ? "checked" : "") + "> Programmierung</label>");
+        out.println("                    <label><input type='checkbox' name='interessen' value='design' " + (isInterestChecked(formData, "design") ? "checked" : "") + "> Design</label>");
+        out.println("                    <label><input type='checkbox' name='interessen' value='datenbanken' " + (isInterestChecked(formData, "datenbanken") ? "checked" : "") + "> Datenbanken</label>");
+        out.println("                    <label><input type='checkbox' name='interessen' value='netzwerke' " + (isInterestChecked(formData, "netzwerke") ? "checked" : "") + "> Netzwerke</label>");
         out.println("                </div>");
         if (hasError(errors, "interessen")) {
             out.println("                <span class='error-message'>" + errors.get("interessen") + "</span>");
@@ -347,8 +332,7 @@ public class FormularServlet extends HttpServlet {
         out.println("            <div class='form-group" + (hasError(errors, "nachricht") ? " error" : "") + "'>");
         out.println("                <label for='nachricht'>Nachricht * (max. 500 Zeichen)</label>");
         out.println("                <textarea id='nachricht' name='nachricht' rows='5' ");
-        out.println("                          placeholder='Ihre Nachricht...' required>" +
-                getValue(formData, "nachricht") + "</textarea>");
+        out.println("                          placeholder='Ihre Nachricht...' required>" + getValue(formData, "nachricht") + "</textarea>");
         if (hasError(errors, "nachricht")) {
             out.println("                <span class='error-message'>" + errors.get("nachricht") + "</span>");
         }
@@ -357,8 +341,7 @@ public class FormularServlet extends HttpServlet {
         // Newsletter (Checkbox)
         out.println("            <div class='form-group'>");
         out.println("                <label class='checkbox-single'>");
-        out.println("                    <input type='checkbox' name='newsletter' value='ja' " +
-                (getValue(formData, "newsletter").equals("checked") ? "checked" : "") + ">");
+        out.println("                    <input type='checkbox' name='newsletter' value='ja' " + (getValue(formData, "newsletter").equals("checked") ? "checked" : "") + ">");
         out.println("                    Ich möchte den Newsletter erhalten");
         out.println("                </label>");
         out.println("            </div>");

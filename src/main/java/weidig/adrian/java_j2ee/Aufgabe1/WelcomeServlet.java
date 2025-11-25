@@ -64,8 +64,7 @@ public class WelcomeServlet extends HttpServlet {
      * - redirect() würde GET verwenden
      */
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         DebugLog.log("👋", "WelcomeServlet.doPost() - Willkommensseite wird angezeigt");
 
@@ -277,11 +276,7 @@ public class WelcomeServlet extends HttpServlet {
      */
     private String escapeHtml(String text) {
         if (text == null) return "";
-        return text.replace("&", "&amp;")
-                .replace("<", "&lt;")
-                .replace(">", "&gt;")
-                .replace("\"", "&quot;")
-                .replace("'", "&#39;");
+        return text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace("\"", "&quot;").replace("'", "&#39;");
     }
 
     @Override

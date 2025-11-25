@@ -23,8 +23,7 @@ public class RequestLifecycleListener implements ServletRequestListener {
         long startTime = System.currentTimeMillis();
         request.setAttribute("requestStartTime", startTime);
 
-        DebugLog.log("🌐", "REQUEST: " + request.getMethod() + " " + request.getRequestURI() +
-                " (IP: " + request.getRemoteAddr() + ")");
+        DebugLog.log("🌐", "REQUEST: " + request.getMethod() + " " + request.getRequestURI() + " (IP: " + request.getRemoteAddr() + ")");
     }
 
     @Override
