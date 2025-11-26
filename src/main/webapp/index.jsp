@@ -254,6 +254,46 @@
         </a>
     </div>
 
+    <!-- AUFGABEN TEIL II -->
+    <h2 class="category-header">📚 Aufgaben - Java EE Servlets Teil II</h2>
+    <div class="menu-grid">
+        <a href="info" class="menu-card exercise">
+            <span class="icon">🛈</span>
+            <h3>Aufgabe 2.1: Info</h3>
+            <p>HTTP-Methode, Client-IP, User-Agent, URL, Serverzeit</p>
+            <span class="badge">Aufgabe 2.1</span>
+        </a>
+
+        <a href="register" class="menu-card exercise">
+            <span class="icon">📝</span>
+            <h3>Aufgabe 2.2: Register</h3>
+            <p>Formular mit Validierung (Name, Email)</p>
+            <span class="badge">Aufgabe 2.2</span>
+        </a>
+
+        <a href="visits" class="menu-card exercise">
+            <span class="icon">👁️</span>
+            <h3>Aufgabe 2.3: Visits</h3>
+            <p>Session-Besuchszähler mit Reset</p>
+            <span class="badge">Aufgabe 2.3</span>
+        </a>
+
+        <a href="headers" class="menu-card exercise">
+            <span class="icon">📋</span>
+            <h3>Aufgabe 2.4: Headers</h3>
+            <p>Request-Header lesen, Security-Header setzen</p>
+            <span class="badge">Aufgabe 2.4</span>
+        </a>
+
+        <a href="user?id=1" class="menu-card exercise">
+            <span class="icon">👤</span>
+            <h3>Aufgabe 2.5: User</h3>
+            <p>Parameter-Validierung mit Custom Error Page</p>
+            <span class="badge">Aufgabe 2.5</span>
+        </a>
+    </div>
+
+
     <!-- ═══════════════════════════════════════════════════════════ -->
     <!-- KATEGORIE: Demo-Anwendungen -->
     <!-- ═══════════════════════════════════════════════════════════ -->
