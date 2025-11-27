@@ -26,10 +26,30 @@ public class HeadersServlet extends HttpServlet {
 
         DebugLog.log("📋", "HeadersServlet.doGet()");
 
+        /*
+         * Header lesen und setzen:
+         *
+         * LESEN (Request-Header):
+         * - Accept-Language: Gibt die bevorzugten Sprachen des Clients an (z.B. "de-DE,de;q=0.9"),
+         *   um Inhalte in der passenden Sprache zu liefern [web:12][web:10].
+         * - User-Agent: Identifiziert den Browser/OS des Clients (z.B. "Mozilla/5.0..."),
+         *   für gerätespezifische Anpassungen oder Logging [web:2][web:13].
+         * - Referer: Zeigt die URL der vorherigen Seite an, nützlich für Analytics oder
+         *   Anti-Hotlinking [web:2].
+         *
+         * SETZEN (Response-Security-Header):
+         * - X-Content-Type-Options: "nosniff" verhindert MIME-Type-Sniffing durch Browser,
+         *   schützt vor Drive-by-Downloads [web:6][web:8].
+         * - X-Frame-Options: "DENY" blockiert Einbettung in Frames/Iframes, verhindert Clickjacking [web:8][web:3].
+         * - X-XSS-Protection: "1; mode=block" aktiviert XSS-Filter im Browser und blockt bei Verdacht [web:6][web:8].
+         */
+
+        // Header lesen
         String acceptLanguage = request.getHeader("Accept-Language");
         String userAgent = request.getHeader("User-Agent");
         String referer = request.getHeader("Referer");
 
+        // Header setzen
         response.setHeader("X-Content-Type-Options", "nosniff");
         response.setHeader("X-Frame-Options", "DENY");
         response.setHeader("X-XSS-Protection", "1; mode=block");
