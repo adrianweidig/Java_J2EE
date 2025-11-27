@@ -293,6 +293,43 @@
         </a>
     </div>
 
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- KATEGORIE: Aufgaben (Servlet Teil III - JSP) -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <h2 class="category-header">📚 Aufgaben - Java EE Servlets / JSP Teil III</h2>
+    <div class="menu-grid">
+        <!-- Aufgabe 3.1 -->
+        <a href="<%= request.getContextPath() %>/views/Aufgabe3/hello.jsp" class="menu-card exercise">
+            <span class="icon">📅</span>
+            <h3>Aufgabe 3.1: Hello JSP</h3>
+            <p>JSP mit LocalDateTime, Scriptlets und HTML5-Seite</p>
+            <span class="badge">Aufgabe 3.1</span>
+        </a>
+
+        <!-- Aufgabe 3.2 -->
+        <a href="<%= request.getContextPath() %>/views/Aufgabe3/safeEcho.jsp?q=test" class="menu-card exercise">
+            <span class="icon">🛡️</span>
+            <h3>Aufgabe 3.2: Safe Echo</h3>
+            <p>XSS-Prevention mit HTML-Escaping und Custom Methods</p>
+            <span class="badge">Aufgabe 3.2</span>
+        </a>
+
+        <!-- Aufgabe 3.3 -->
+        <a href="<%= request.getContextPath() %>/aufgabe3/user?id=123" class="menu-card exercise">
+            <span class="icon">👤</span>
+            <h3>Aufgabe 3.3: User Detail</h3>
+            <p>Servlet mit Validierung, forward und Custom Error Page</p>
+            <span class="badge">Aufgabe 3.3</span>
+        </a>
+
+        <!-- Aufgabe 3.4 -->
+        <a href="<%= request.getContextPath() %>/aufgabe3/products" class="menu-card exercise">
+            <span class="icon">📦</span>
+            <h3>Aufgabe 3.4: Produkte</h3>
+            <p>Servlet übergibt Produktliste an JSP mit HTML-Tabelle</p>
+            <span class="badge">Aufgabe 3.4</span>
+        </a>
+    </div>
 
     <!-- ═══════════════════════════════════════════════════════════ -->
     <!-- KATEGORIE: Demo-Anwendungen -->
