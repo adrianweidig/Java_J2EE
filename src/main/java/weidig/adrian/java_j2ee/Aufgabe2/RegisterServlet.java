@@ -1,12 +1,16 @@
 package weidig.adrian.java_j2ee.Aufgabe2;
 
-import weidig.adrian.java_j2ee.util.DebugLog;
 import weidig.adrian.java_j2ee.util.DebugConsole;
+import weidig.adrian.java_j2ee.util.DebugLog;
 
-import java.io.*;
-import java.util.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * AUFGABE 2.2: RegisterServlet
