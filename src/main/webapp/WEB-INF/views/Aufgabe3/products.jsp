@@ -1,5 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ page import="java.util.List, java.util.Map" %>
+<%@ page import="weidig.adrian.java_j2ee.Aufgabe3.Produkt" %>
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -89,15 +90,15 @@
         <tbody>
         <%
             @SuppressWarnings("unchecked")
-            List<Map<String, Object>> products = (List<Map<String, Object>>) request.getAttribute("products");
+            List<Produkt> products = (List<Produkt>) request.getAttribute("products");
 
             if (products != null && !products.isEmpty()) {
-                for (Map<String, Object> product : products) {
+                for (Produkt product : products) {
         %>
         <tr>
-            <td class="id"><%= product.get("id") %></td>
-            <td><%= product.get("name") %></td>
-            <td class="price"><%= String.format("%.2f", product.get("price")) %> €</td>
+            <td class="id"><%= product.getId() %></td>
+            <td><%= product.getName() %></td>
+            <td class="price"><%= String.format("%.2f", product.getPreis()) %> €</td>
         </tr>
         <%
             }

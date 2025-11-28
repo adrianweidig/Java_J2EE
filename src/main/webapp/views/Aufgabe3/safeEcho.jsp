@@ -95,9 +95,8 @@
 <%!
     // 1. Aufgabe: Escaping-Methode
     private String escapeHtml(String s) {
-        if (s == null) {
-            return "";
-        }
+        if (s == null) return "";
+
         return s.replace("&", "&amp;")
                 .replace("<", "&lt;")
                 .replace(">", "&gt;")
@@ -116,6 +115,18 @@
 %>
 
 <%
+    // WICHTIG: Erklärung für doppeltes Escaping!
+    // ===========================================
+    // 1. escapeHtml(q)      → '&' wird zu "&amp;" (logisch korrekt für HTML-Ausgabe)
+    // 2. showAsText(escapedQ) → "&amp;" wird zu "&amp;amp;" (für Sichtbarkeit im Browser)
+    //
+    // BEISPIEL: q = "<script>"
+    //   Schritt 1: escapeHtml("<script>")  → "&lt;script&gt;"
+    //   Schritt 2: showAsText("&lt;script&gt;") → "&amp;lt;script&amp;gt;"
+    //
+    // Browser zeigt dann: <script> (als TEXT, nicht als Code!)
+    // OHNE Schritt 2 würde Browser "&lt;" als "<" interpretieren!
+
     String q = request.getParameter("q");
     String escapedQ = escapeHtml(q);      // logisch korrektes Escaping
     String visibleEscapedQ = showAsText(escapedQ); // für Anzeige der Entities

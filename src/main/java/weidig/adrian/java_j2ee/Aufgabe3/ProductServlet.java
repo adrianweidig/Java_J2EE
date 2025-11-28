@@ -19,9 +19,17 @@ public class ProductServlet extends HttpServlet {
             throws ServletException, IOException {
 
         // Produktliste erstellen
-        List<Map<String, Object>> products = new ArrayList<>();
+        //List<Map<String, Object>> products = new ArrayList<>();
+        List<Produkt> products = new ArrayList<>();
 
-        Map<String, Object> p1 = new HashMap<>();
+        products.add(new Produkt(1, "Laptop", 899.99));
+        products.add(new Produkt(2, "Smartphone", 699.99));
+        products.add(new Produkt(3, "Monitor", 299.99));
+        products.add(new Produkt(4, "Tastatur", 79.99));
+        products.add(new Produkt(5, "Maus", 39.99));
+
+
+       /* Map<String, Object> p1 = new HashMap<>();
         p1.put("id", 1);
         p1.put("name", "Laptop");
         p1.put("price", 899.99);
@@ -49,7 +57,7 @@ public class ProductServlet extends HttpServlet {
         p5.put("id", 5);
         p5.put("name", "Maus");
         p5.put("price", 39.99);
-        products.add(p5);
+        products.add(p5); */
 
         // Attribute setzen und zur JSP forwarden
         request.setAttribute("products", products);
