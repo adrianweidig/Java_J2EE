@@ -1,0 +1,5 @@
+﻿JSTL 1.2 (javax.servlet:jstl:1.2)
+
+Lizenzhinweis:
+Diese Bibliothek wird unter der Apache License, Version 2.0 bereitgestellt.
+Vollständiger Lizenztext: https://www.apache.org/licenses/LICENSE-2.0.txt

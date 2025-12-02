@@ -140,6 +140,10 @@
             background: #999;
         }
 
+        .menu-card.database .badge {
+            background: #2196F3;
+        }
+
         .footer {
             text-align: center;
             color: white;
@@ -403,8 +407,40 @@
     <!-- ═══════════════════════════════════════════════════════════ -->
     <!-- KATEGORIE: Erweiterte Features -->
     <!-- ═══════════════════════════════════════════════════════════ -->
-    <h2 class="category-header">⚡ Erweiterte Features</h2>
+    <h2 class="category-header">⚡ Erweiterte Features - SQLite Datenbank</h2>
     <div class="menu-grid">
+        <!-- SQLite Bücher -->
+        <a href="<%= request.getContextPath() %>/booksDB" class="menu-card database">
+            <span class="icon">📚</span>
+            <h3>SQLite: Bücher</h3>
+            <p>Bücherliste aus SQLite-Datenbank (j2ee.sqlite)</p>
+            <span class="badge">SQLite DB</span>
+        </a>
+
+        <!-- SQLite Buch-Details -->
+        <a href="<%= request.getContextPath() %>/bookDB?id=1" class="menu-card database">
+            <span class="icon">📕</span>
+            <h3>SQLite: Buch-Details</h3>
+            <p>Einzelnes Buch aus DB mit Validierung</p>
+            <span class="badge">SQLite DB</span>
+        </a>
+
+        <!-- SQLite Warenkorb -->
+        <a href="<%= request.getContextPath() %>/cartDB" class="menu-card database">
+            <span class="icon">🛒</span>
+            <h3>SQLite: Warenkorb</h3>
+            <p>Warenkorb mit Büchern aus SQLite-DB</p>
+            <span class="badge">SQLite DB</span>
+        </a>
+
+        <!-- SQLite Autos -->
+        <a href="<%= request.getContextPath() %>/carsDB?brand=" class="menu-card database">
+            <span class="icon">🚗</span>
+            <h3>SQLite: Autos suchen</h3>
+            <p>Autosuche mit Persistierung in SQLite-DB</p>
+            <span class="badge">SQLite DB</span>
+        </a>
+
         <!-- Session Management -->
         <a href="session-demo" class="menu-card coming-soon">
             <span class="icon">🔐</span>
