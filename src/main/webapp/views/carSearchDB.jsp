@@ -166,7 +166,6 @@
                 <tr>
                     <th>ID</th>
                     <th>Marke</th>
-                    <th>Modell</th>
                     <th>Baujahr</th>
                     <th class="price">Preis (EUR)</th>
                 </tr>
@@ -176,7 +175,6 @@
                     <tr>
                         <td>${car.id}</td>
                         <td>${fn:escapeXml(car.brand)}</td>
-                        <td>${fn:escapeXml(car.model)}</td>
                         <td>${car.year}</td>
                         <td class="price">${car.price}</td>
                     </tr>

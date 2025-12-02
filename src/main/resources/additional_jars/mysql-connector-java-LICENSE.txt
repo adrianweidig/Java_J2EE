@@ -1,7 +1,0 @@
-﻿MySQL Connector/J (z. B. mysql:mysql-connector-java:8.0.28)
-
-Lizenzhinweis:
-Diese Bibliothek wird unter der GNU General Public License Version 2
-mit FOSS-Ausnahme bereitgestellt.
-Details siehe: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
-sowie die MySQL Connector/J Lizenzhinweise.

@@ -176,7 +176,7 @@
                     <th>Titel</th>
                     <th>Preis pro Stück (EUR)</th>
                     <th class="amount">Menge</th>
-                    <th class="price">Gesamtpreis (EUR)</th>
+                    <th>Gesamtpreis (EUR)</th>
                     <th>Aktion</th>
                 </tr>
             </thead>

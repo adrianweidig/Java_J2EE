@@ -129,7 +129,7 @@
                     <th>ID</th>
                     <th>Titel</th>
                     <th>Autor</th>
-                    <th class="price">Preis (EUR)</th>
+                    <th>Preis (EUR)</th>
                     <th>Aktionen</th>
                 </tr>
             </thead>

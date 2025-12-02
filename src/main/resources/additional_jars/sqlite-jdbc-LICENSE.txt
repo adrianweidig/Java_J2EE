@@ -1,6 +1,0 @@
-﻿SQLite JDBC (org.xerial:sqlite-jdbc, Treiberklasse org.sqlite.JDBC)
-
-Lizenzhinweis:
-Diese Bibliothek wird unter der Apache License, Version 2.0 bereitgestellt.
-Vollständiger Lizenztext: https://www.apache.org/licenses/LICENSE-2.0.txt
-Weitere Hinweise: https://github.com/xerial/sqlite-jdbc

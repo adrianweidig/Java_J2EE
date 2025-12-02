@@ -8,7 +8,6 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
-    mavenLocal()
 }
 
 ext {
@@ -28,8 +27,14 @@ dependencies {
     implementation('org.jboss.resteasy:resteasy-servlet-initializer:4.6.2.Final')
     implementation('org.jboss.resteasy:resteasy-jackson2-provider:4.6.2.Final')
 
+    // https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc
+    implementation("org.xerial:sqlite-jdbc:3.51.1.0")
+
+    implementation 'javax.servlet:jstl:1.2'
+
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+
 }
 
 test {
