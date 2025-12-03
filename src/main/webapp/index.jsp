@@ -407,7 +407,7 @@
     <!-- ═══════════════════════════════════════════════════════════ -->
     <!-- KATEGORIE: Erweiterte Features -->
     <!-- ═══════════════════════════════════════════════════════════ -->
-    <h2 class="category-header">⚡ Erweiterte Features - SQLite Datenbank</h2>
+    <h2 class="category-header">⚡ Erweiterte Features</h2>
     <div class="menu-grid">
         <!-- SQLite Bücher -->
         <a href="<%= request.getContextPath() %>/booksDB" class="menu-card database">
@@ -441,44 +441,12 @@
             <span class="badge">SQLite DB</span>
         </a>
 
-        <!-- Session Management -->
-        <a href="session-demo" class="menu-card coming-soon">
-            <span class="icon">🔐</span>
-            <h3>Session Management</h3>
-            <p>Session-Handling, Login/Logout und User-Tracking</p>
-            <span class="badge">Bald verfügbar</span>
-        </a>
-
-        <!-- Database Demo -->
-        <a href="database-demo" class="menu-card coming-soon">
-            <span class="icon">🗄️</span>
-            <h3>Datenbank Demo</h3>
-            <p>JPA Entities, CRUD-Operationen und Persistence</p>
-            <span class="badge">Bald verfügbar</span>
-        </a>
-
-        <!-- REST API -->
-        <a href="api/docs" class="menu-card coming-soon">
-            <span class="icon">🚀</span>
-            <h3>REST API</h3>
-            <p>RESTful Web Services mit JAX-RS</p>
-            <span class="badge">Bald verfügbar</span>
-        </a>
-
-        <!-- JSF Demo -->
-        <a href="jsf-demo.xhtml" class="menu-card coming-soon">
-            <span class="icon">🎨</span>
-            <h3>JSF Facelets</h3>
-            <p>JavaServer Faces mit Facelets Templates</p>
-            <span class="badge">Bald verfügbar</span>
-        </a>
-
-        <!-- EJB Demo -->
-        <a href="ejb-demo" class="menu-card coming-soon">
-            <span class="icon">🏢</span>
-            <h3>EJB Session Beans</h3>
-            <p>Enterprise JavaBeans und Business Logic</p>
-            <span class="badge">Bald verfügbar</span>
+        <!-- JPA Bücher -->
+        <a href="<%= request.getContextPath() %>/booksJPA" class="menu-card jpa">
+            <span class="icon">📚</span>
+            <h3>JPA: Bücherliste</h3>
+            <p>Bücher mit JPA/Hibernate + SQLite + JSTL + EntityManager</p>
+            <span class="badge">JPA/Hibernate</span>
         </a>
 
         <!-- Admin Console Link -->

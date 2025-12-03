@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
-    <persistence-unit name="default">
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+             version="2.2">
 
+    <persistence-unit name="bookstorePU" transaction-type="RESOURCE_LOCAL">
+        <class>weidig.adrian.java_j2ee.model.Book</class>
+
+        <properties>
+            <!-- SQLite Treiber -->
+            <property name="javax.persistence.jdbc.driver" value="org.sqlite.JDBC"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:sqlite:D:\Programmierung\Java\Java_J2EE\src\main\resources\j2ee.sqlite"/>
+            <property name="javax.persistence.jdbc.user" value=""/>
+            <property name="javax.persistence.jdbc.password" value=""/>
+
+            <!-- Custom SQLite Dialect -->
+            <property name="hibernate.dialect" value="weidig.adrian.java_j2ee.dialect.SQLiteDialect"/>
+
+            <!-- DDL Auto -->
+            <property name="hibernate.hbm2ddl.auto" value="validate"/>
+
+            <!-- SQL logging (ausschalten mit false) -->
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
     </persistence-unit>
 </persistence>

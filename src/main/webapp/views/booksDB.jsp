@@ -112,7 +112,7 @@
 <body>
 <div class="container">
     <a href="${pageContext.request.contextPath}/" class="back-link">← Zurück zur Startseite</a>
-    
+
     <h1>📚 Bücherliste (SQLite-DB)</h1>
     <p class="subtitle">Alle Bücher aus der SQLite-Datenbank (j2ee.sqlite)</p>
 
