@@ -41,6 +41,10 @@ dependencies {
     // JSTL
     implementation 'javax.servlet:jstl:1.2'
 
+    // JSF Dependencies ===
+    implementation 'com.sun.faces:jsf-api:2.2.20'
+    implementation 'com.sun.faces:jsf-impl:2.2.20'
+
     // JUnit
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
