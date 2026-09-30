@@ -1,5 +1,8 @@
 # 📚 Java EE 8 Lernprojekt - Bookstore Application
 
+> ab 04.12.2025 keine Änderungen mehr - aktueller Freeze-Zustand und keine weitere Bearbeitung
+
+
 [![Java](https://img.shields.io/badge/Java-8%20(Update%20144%2B)-orange.svg)](https://adoptium.net/)
 [![Jakarta EE](https://img.shields.io/badge/Jakarta%20EE-8-blue.svg)](https://jakarta.ee/)
 [![GlassFish](https://img.shields.io/badge/GlassFish-5.1.0-green.svg)](https://glassfish.org/)
